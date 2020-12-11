@@ -1,0 +1,107 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: "Noto Sans KR";
+    cursor: default;
+}
+*:focus {
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+h1 {
+    position: fixed;
+    top: 80px;
+    font-size: 25px;
+    text-align: center;
+}
+
+div#mainDiv {
+    width: 1000px;
+    min-width: 1000px;
+    max-width: 1000px;
+    padding: 0px 0px;
+    height: 60%;
+    overflow: scroll;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+div#mainDiv::-webkit-scrollbar { 
+    display: none;
+}
+
+
+div.menu {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    padding: 15px 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+div.menu div.imgDiv {
+    width: 220px;
+    height: 220px;
+    min-height: 220px;
+    box-shadow: 0 0 5px 1px rgb(100,100,100);
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px 0px 50px 0px;
+    transition: border-radius ease 0.4s 0s;
+}
+div.menu div.imgDiv:hover {
+    border-radius: 0px 0px 0px 0px;
+    transition: border-radius ease 0.4s 0s;
+}
+div.menu div.imgDiv img {
+    height: 220px;
+    min-height: 220px;
+    cursor: pointer;
+    transition: transform ease 0.4s 0s;
+}
+div.menu div.imgDiv img:hover {
+    height: 220px;
+    transform: scale(1.1);
+    transition: transform ease 0.4s 0s;
+}
+div.menu p{
+    width: 220px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    color: rgb(0,0,0,0.2);
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease 0.4s 0s;
+}
+div.menu:hover > p {
+    color: rgb(0,0,0,0.8);
+    transition: color ease 0.4s 0s;
+}

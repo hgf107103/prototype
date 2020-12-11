@@ -1,0 +1,504 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: "Noto Sans KR";
+    cursor: default;
+}
+*:focus {
+    outline: none;
+}
+body {
+    display: flex;
+    background-color: rgb(15,15,15);
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar { 
+    display: none;
+}
+
+
+svg {
+    width: 0;
+    height: 0;
+}
+.bgBlur:before {
+
+    content: '';
+    position: fixed;
+    top: 0; left:0; right:0; bottom:0;
+    background: inherit;
+    z-index:-1;
+  
+    filter:url(#blur);
+  
+}
+
+/*로그인관련 스타일*/
+input#signup {
+    position: fixed;
+    top: 30px;
+    z-index: 9999;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 60px;
+    background-color: black;
+    opacity: 1;
+    color: rgb(100,100,100);
+    cursor: pointer;
+    transition: border ease 0.5s 0.3s, color ease 0.5s 0.3s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+input#signup:hover{
+    border: 1px solid rgb(200,200,200);
+    color: rgb(200,200,200);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.5), 0 0 0 0.1em rgba(100,100,100,0.5), 0 0 0 0.15em rgba(100,100,100,0.3);
+    transition: border ease 0.5s 0s, color ease 0.5s 0s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+input#inLogin {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 60px;
+    background-color: black;
+    opacity: 1;
+    color: rgb(100,100,100);
+    cursor: pointer;
+    transition: border ease 0.5s 0.3s, color ease 0.5s 0.3s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+input#inLogin:hover{
+    border: 1px solid rgb(200,200,200);
+    color: rgb(200,200,200);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.5), 0 0 0 0.1em rgba(100,100,100,0.5), 0 0 0 0.15em rgba(100,100,100,0.3);
+    transition: border ease 0.5s 0s, color ease 0.5s 0s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+input.loginInputStyle {
+    display: block;
+    position: fixed;
+    width: 250px;
+    top: 30px;
+    right: -300px;
+    font-size: 18px;
+    opacity: 0;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgba(100,100,100,0.2);
+    border: 2px solid rgba(50,50,50,0.2);
+    color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    cursor: text;
+    transition: right ease 0.8s 0s, border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1.2s 0s;
+}
+input#loginIDinput {
+    top: 100px;
+}
+input#loginPWDinput {
+    top: 150px;
+}
+
+input.loginInputStyle:hover {
+    background-color: rgba(100,100,100,0.5);
+    border: 2px solid rgba(50,50,50,0.5);
+    color: rgba(255,255,255,0.5);
+    transition: right ease 0.8s 0s, border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1.2s 0s;
+}
+input.loginInputStyle:focus {
+    background-color: rgba(100,100,100,0.8);
+    border: 2px solid rgba(50,50,50,1);
+    color: rgba(255,255,255,1);
+    transition: right ease 0.8s 0s, border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1.2s 0s;
+}
+input.loginInputStyle::placeholder {
+    color: rgba(150,150,150,0.3);
+    transition: color ease 0.3s 0s;
+}
+input.loginInputStyle:hover::placeholder {
+    color: rgb(150,150,150,0.8);
+    transition: color ease 0.3s 0s;
+}
+input.loginInputStyle:focus::placeholder {
+    color: rgb(150,150,150);
+    transition: color ease 0.3s 0s;
+}
+
+input#loginSubmitinput {
+    position: fixed;
+    top: 200px;
+    right: -300px;
+    font-size: 18px;
+    opacity: 0;
+    padding: 5px 20px;
+    text-align: center;
+    background-color: rgba(100,100,100,0.5);
+    border: 2px solid rgba(50,50,50,0.5);
+    color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: right ease 0.8s 0s, border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1.2s 0s;
+}
+input#loginSubmitinput:hover {
+    background-color: rgba(100,100,100,1);
+    border: 2px solid rgba(50,50,50,1);
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: right ease 0.8s 0s, border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1.2s 0s, color ease 0.5s 0s;
+}
+/*로그인관련 스타일*/
+
+
+/*회원가입*/
+div#signupDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: -100%;
+    margin: auto;
+    transition: top ease 0.8s 0s, opacity cubic-bezier(0.1,0.5,0.8,1) 1.6s 0.0s;
+}
+div#signupForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    width: 600px;
+    height: 850px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.9);
+}
+
+div#signupForm div.signupSection {
+    width: 70%;
+    opacity: 0;
+    border-left: 2px solid rgb(150,150,150,0.1);
+    border-right: 2px solid rgb(150,150,150,0.1);
+    margin: 10px auto;
+    padding: 20px 0px;
+    transition: opacity ease 1s 0s, border ease 0.6s 0s;
+}
+div#signupForm div.signupSection:hover {
+    border-left: 2px solid rgb(150,150,150,0.4);
+    border-right: 2px solid rgb(150,150,150,0.4);
+    transition: border ease 0.6s 0s;
+}
+div#signupForm div#signupSubmitSection {
+    width: 70%;
+    margin: 5px auto;
+    opacity: 0;
+    transition: opacity ease 1s 0s;
+}
+
+div#signupForm input {
+    display: block;
+    margin: 5px auto;
+    border: 1px solid rgba(0,0,0,0);
+    background-color: rgba(230,230,230,0);
+    text-align: center;
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s;
+}
+div#signupForm input[type=text] {
+    width: 70%;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: text;
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=text]:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(230,230,230,0.3);
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=text]:focus {
+    border: 1px solid rgba(0,0,0,0.4);
+    background-color: rgba(230,230,230,0.6);
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=password] {
+    width: 70%;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: text;
+    transition:  border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=password]:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(230,230,230,0.3);
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=password]:focus {
+    border: 1px solid rgba(0,0,0,0.4);
+    background-color: rgba(230,230,230,0.6);
+    transition: border ease 0.5s 0s, background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=button] {
+    width: 150px;
+    padding: 8px 0px;
+    font-size: 18px;
+    background-color: rgba(150, 150, 150, 0.3);
+    cursor: pointer;
+    transition: background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm input[type=button]:hover {
+    background-color: rgba(150,150,150,0.6);
+    transition: background-color ease 0.5s 0s, opacity ease 1s 0s;
+}
+div#signupForm div.signupSection p.signupLog {
+    margin: 0px auto;
+    margin-top: 15px;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    transition: color ease 0.6s 0s;
+}
+div#signupForm div.signupSection p#signupNameLog {
+    margin-bottom: 15px;
+}
+
+/*회원가입*/
+
+
+/*검색관련 스타일*/
+div#mainContents {
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+div#mainContents input#searchText {
+    border: none;
+    border-bottom: 5px solid rgba(50,50,50,0);
+    padding: 10px 20px;
+    width: 560px;
+    font-size: 23px;
+    background-color: rgba(0,0,0,0);
+    margin: 0px auto;
+    margin-bottom: 80px;
+    text-align: center;
+    color: white;
+    cursor: text;
+    transition: border ease 1s 0s;
+} 
+div#mainContents input#searchText:hover {
+    border-bottom: 5px solid rgba(50,50,50,0.1);
+    transition: border ease 0.5s 0s;
+} 
+div#mainContents input#searchText:focus {
+    border-bottom: 5px solid rgba(50,50,50,0.4);
+    transition: border ease 1s 0s;
+} 
+
+div#mainContents input#searchText::placeholder {
+    color: rgba(100,100,100,0.8);
+} 
+div#mainContents div#searchList {
+    opacity: 0;
+    display: inline-block;
+    margin: 0px auto;
+    color: white;
+    height: 0vh;
+    font-size: 20px;
+    padding: 5px 30px;
+    text-align: center;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: opacity ease 2s 0s, margin ease 2s 0s, height ease 2s 0s, border ease 2s 0s;
+}
+div#mainContents div#searchList::-webkit-scrollbar { 
+    display: none;
+}
+div#mainContents div#searchList span#noList {
+    color: red;
+}
+
+div#mainContents div#searchList table{
+    width: 450px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-right: 2px solid rgba(255,255,255,0.2);
+    transition: border-right ease 0.5s 0s;
+}
+div#mainContents div#searchList table:hover{
+    border-right: 2px solid rgba(255,255,255,1);
+    transition: border-right ease 0.5s 0s;
+}
+div#mainContents div#searchList table td{
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+}
+div#mainContents div#searchList table td.listImgTd {
+    width: 25%;
+}
+div#mainContents div#searchList table td.listCountryTd {
+    width: 75%;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 5px red;
+    text-overflow: clip;
+    overflow: hidden;
+    padding: 0px 30px;
+}
+div#mainContents div#searchList table td.listRedirectTd {
+    width: 75%;
+}
+div#mainContents div#searchList table td.listImgTd img{
+    width: 90%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+div#mainContents div#searchList table td.listRedirectTd span{
+    color: white;
+    cursor: pointer;
+    transition: color ease 0.3s 0s;
+}
+div#mainContents div#searchList table td.listRedirectTd span:hover{
+    color: red;
+    transition: color ease 0.3s 0s;
+}
+/*검색관련 스타일*/
+input#logout {
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 60px;
+    background-color: black;
+    opacity: 1;
+    color: rgb(100,100,100);
+    cursor: pointer;
+    transition: border ease 0.5s 0.3s, color ease 0.5s 0.3s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+input#logout:hover{
+    border: 1px solid rgb(200,200,200);
+    color: rgb(200,200,200);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.5), 0 0 0 0.1em rgba(100,100,100,0.5), 0 0 0 0.15em rgba(100,100,100,0.3);
+    transition: border ease 0.5s 0s, color ease 0.5s 0s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+/*북마크관련 스타일*/
+input#myBookmark {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 60px;
+    background-color: black;
+    opacity: 1;
+    color: rgb(100,100,100);
+    cursor: pointer;
+    transition: border ease 0.5s 0.3s, color ease 0.5s 0.3s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+
+input#myBookmark:hover{
+    border: 1px solid rgb(200,200,200);
+    color: rgb(200,200,200);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.5), 0 0 0 0.1em rgba(100,100,100,0.5), 0 0 0 0.15em rgba(100,100,100,0.3);
+    transition: border ease 0.5s 0s, color ease 0.5s 0s, box-shadow ease 0.7s 0s, opacity ease 1.3s 0s;
+}
+
+div#userBookmark {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0px;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background-color: rgba(50,50,50,0.5);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: right ease 1s 0s;
+}
+div#userBookmark::-webkit-scrollbar { 
+    display: none;
+}
+
+div#userBookmark table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    border-right: 2px solid rgba(255,255,255,0.2);
+    transition: border-right ease 0.5s 0s;
+    table-layout: fixed;
+}
+div#userBookmark table:hover {
+    border-right: 2px solid rgba(255,255,255,1);
+    transition: border-right ease 0.5s 0s;
+}
+div#userBookmark table td{
+    color: white;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 18px;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+div#userBookmark table td.imageTd{
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 110px;
+    height: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div#userBookmark table td.nameTd{
+    width: 70%;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 38px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px blue;
+    font-weight: bold;
+}
+div#userBookmark table td.goTd{
+    width: 35%;
+}
+div#userBookmark table td.delTd{
+    width: 35%;
+    text-align: left;
+}
+div#userBookmark table td span{
+    color: white;
+    cursor: pointer;
+    transition: color ease 0.3s 0s;
+}
+div#userBookmark table td span:hover{
+    color: rgb(255,0,0);
+    transition: color ease 0.3s 0s;
+}
+/*북마크관련 스타일*/
