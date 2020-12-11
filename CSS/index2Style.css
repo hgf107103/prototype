@@ -129,6 +129,65 @@ div#menuBar div#login input#loginSubmit {
     margin-left: 10px;
 }
 
+div#menuBar div#user {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    justify-content: right;
+    align-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+div#menuBar div#user p#userInfo {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 18px;
+    transition: color ease 0.5s 0s;
+}
+div#menuBar div#user p#userInfo:hover > span {
+    color: rgb(255,80,80);
+    transition: color ease 0.5s 0s;
+}
+div#menuBar div#user p#userInfo span{
+    transition: color ease 0.5s 0s;
+}
+div#menuBar div#user input.inputButtonStyle {
+    padding: 7px 10px;
+    margin: 0px 5px;
+    min-width: 90px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid rgba(200,200,255,0);
+    background-color: rgba(255,255,255,0);
+    transition: border-bottom ease 0.4s 0s;
+}
+div#menuBar div#user input.inputButtonStyle:hover{
+    border-bottom: 2px solid rgba(200,200,255);
+    transition: border-bottom ease 0.4s 0s;
+}
+div#menuBar div#user input#userBookMark {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+div#menuBar div#user input#logout {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+
+
+
 
 
 

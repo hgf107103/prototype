@@ -13,14 +13,13 @@
     <div id="menuBarOuter">
         <div id="menuBar">
             <div id="mainIcon">
-                <img src="img/icon/mainIcon.png" onclick="location.href='index.html'" alt="">
-                <p id="pageTitle" onclick="location.href='index.html'">방구석여행기</p>
+                <img src="img/icon/mainIcon.png" onclick="location.href='index2.html'" alt="">
+                <p id="pageTitle" onclick="location.href='index2.html'">방구석여행기</p>
             </div>
-            <div id="login">
-                <input type="text" id="loginID" class="inputTextStyle" placeholder="아이디 입력">
-                <input type="password" id="loginPWD" class="inputTextStyle" placeholder="비밀번호 입력">
-                <input type="button" id="loginSubmit" class="inputButtonStyle" value="로그인" onclick="location.href = 'index_login.html'">
-                <input type="button" id="signupSubmit" class="inputButtonStyle" value="회원가입" onclick="location.href = 'signup.html'">
+            <div id="user">
+                <p id="userInfo"><span>홍길동</span>님 환영합니다!</p>
+                <input id="userBookMark" type="button" class="inputButtonStyle" value="북마크확인">
+                <input id="logout" type="button" class="inputButtonStyle" value="로그아웃" onclick="location.href='index.html'">
             </div>
         </div>
     </div>
@@ -63,7 +62,7 @@
             <div id="asiaCountry" class="continent">
                 <h2 class="countryHeader">아시아</h2>
                 <div id="countryListAsia" class="countryList">
-                    <div id="korea" class="country" onclick="window.open('country.html', '_blank')">
+                    <div id="korea" class="country" onclick="window.open('country4.html', '_blank')">
                         <p>한국</p>
                         <img src="img/country/korea_img.jpg" alt="">
                     </div>
